@@ -80,7 +80,7 @@ export default function Contact() {
                 </button>
 
                 <a
-                  href="https://wa.me/90808006831?text=Hi%20I%20am%20interested%20in%20your%20tours"
+                  href="https://wa.me/9080806831?text=Hi%20I%20am%20interested%20in%20your%20tours"
                   className="inline-block bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-semibold text-white"
                 >
                   WhatsApp Us

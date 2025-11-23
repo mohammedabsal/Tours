@@ -13,7 +13,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Aslam Holidays — All Rights Reserved.</p>
 
           <div className="text-sm">
-            <div>WhatsApp: <a className="underline" href="https://wa.me/90808006831">90808 06831</a></div>
+            <div>WhatsApp: <a className="underline" href="https://wa.me/9080806831">90808 06831</a></div>
             <div>Email: <a className="underline" href="mailto:rajartr22@gmail.com">rajartr22@gmail.com</a></div>
             <div>Address: Annasalai, Kodaikanal - 1</div>
           </div>

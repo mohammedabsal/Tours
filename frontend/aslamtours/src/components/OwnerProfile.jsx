@@ -26,7 +26,7 @@ export default function OwnerProfile() {
 
           <div className="mt-4 flex items-center gap-4">
             <a
-              href="https://wa.me/90808006831"
+              href="https://wa.me/9080806831"
               aria-label="WhatsApp"
               title="WhatsApp — 90808 06831"
               className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700"
