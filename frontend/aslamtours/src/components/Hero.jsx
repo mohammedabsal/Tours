@@ -67,7 +67,7 @@ export default function Hero() {
           transition={{ delay: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
         >
           <a
-            href={`https://wa.me/9080806831?text=${msg}`}
+            href={`https://wa.me/919080806831?text=${msg}`}
             className="bg-green-500 px-6 py-3 rounded-lg font-semibold hover:bg-green-600"
           >
             WhatsApp Booking

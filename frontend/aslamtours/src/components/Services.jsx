@@ -140,7 +140,7 @@ export default function Services() {
                     <span className="inline-block text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-md">{item.tag}</span>
                     <div className="flex gap-3">
                       <button
-                        onClick={(e) => { e.stopPropagation(); window.location.href = `https://wa.me/9080806831?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(item.title)}`; }}
+                        onClick={(e) => { e.stopPropagation(); window.location.href = `https://wa.me/919080806831?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(item.title)}`; }}
                         className="inline-flex items-center gap-2 bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-300"
                         aria-label={`Book ${item.title}`}
                       >
@@ -210,7 +210,7 @@ export default function Services() {
 
                   <div className="mt-4 flex gap-3">
                     <a
-                      href={`https://wa.me/9080806831?text=Hi%20I%20want%20details%20about%20${encodeURIComponent(selected.title)}`}
+                      href={`https://wa.me/919080806831?text=Hi%20I%20want%20details%20about%20${encodeURIComponent(selected.title)}`}
                       className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700"
                     >
                       WhatsApp Owner
