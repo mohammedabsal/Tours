@@ -210,7 +210,7 @@ export default function Services() {
 
                   <div className="mt-4 flex gap-3">
                     <a
-                      href={`https://wa.me/91808006831?text=Hi%20I%20want%20details%20about%20${encodeURIComponent(selected.title)}`}
+                      href={`https://wa.me/808006831?text=Hi%20I%20want%20details%20about%20${encodeURIComponent(selected.title)}`}
                       className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700"
                     >
                       WhatsApp Owner
