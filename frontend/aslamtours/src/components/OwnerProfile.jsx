@@ -28,11 +28,11 @@ export default function OwnerProfile() {
             <a
               href="https://wa.me/919080806831"
               aria-label="WhatsApp"
-              title="WhatsApp — 90808 06831"
+              title="WhatsApp — +91 90808 06831"
               className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700"
             >
               <FaWhatsapp className="w-5 h-5" />
-              <span className="sr-only">WhatsApp 90808 06831</span>
+              <span className="sr-only">WhatsApp +91 90808 06831</span>
             </a>
 
             <a
@@ -46,19 +46,19 @@ export default function OwnerProfile() {
             </a>
 
             <a
-              href="tel:9944881312"
+              href="tel:+919944881312"
               aria-label="Phone"
-              title="Call — 99448 81312"
+              title="Call — +91 99448 81312"
               className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white text-emerald-600 border border-emerald-300 hover:bg-emerald-50"
             >
               <FaPhone className="w-5 h-5" />
-              <span className="sr-only">Call 99448 81312</span>
+              <span className="sr-only">Call +91 99448 81312</span>
             </a>
           </div>
 
           <div className="mt-6 text-sm text-gray-600">
             <p><strong>Address:</strong> Annasalai, Kodaikanal - 1</p>
-            <p className="mt-2"><strong>Alternate Contacts:</strong> 98423 06461</p>
+            <p className="mt-2"><strong>Alternate Contacts:</strong> +91 98423 06461</p>
           </div>
 
           {/* Services are displayed in the main Services section */}

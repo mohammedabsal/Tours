@@ -26,7 +26,7 @@ export default function Contact() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="font-semibold">WhatsApp / Phone</p>
-              <p className="mt-1">90808 06831 • 98423 06461 • 99448 81312</p>
+              <p className="mt-1">+91 90808 06831 • +91 98423 06461 • +91 99448 81312</p>
             </div>
 
             <div>

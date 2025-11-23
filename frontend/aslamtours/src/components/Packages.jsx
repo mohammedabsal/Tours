@@ -120,7 +120,7 @@ export default function Packages() {
 
                 <div className="mt-4 flex gap-3">
                   <a
-                    href={`https://wa.me/?text=I'm interested in the ${encodeURIComponent(t.name)}`}
+                    href={`https://wa.me/919080806831?text=${encodeURIComponent("I'm interested in the " + t.name)}`}
                     className="inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700"
                   >
                     Book Now
