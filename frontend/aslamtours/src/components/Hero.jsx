@@ -1,5 +1,5 @@
 import { motion as Motion } from "framer-motion";
-import videoSrc from "../assets/video2.mp4";
+import videoSrc from "../assets/video.mp4";
 
 export default function Hero() {
   const msg = encodeURIComponent("Hi, I’d like to book a trip!");
