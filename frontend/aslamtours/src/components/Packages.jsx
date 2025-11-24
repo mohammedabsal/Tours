@@ -9,7 +9,6 @@ export default function Packages() {
     {
       id: 1,
       name: "Village Tour (Tour No.1)",
-      price: "₹2,499",
       img: poompariImg,
       stops: [
         "Mahalakshmi Temple",
@@ -25,7 +24,6 @@ export default function Packages() {
     {
       id: 2,
       name: "Park Tour (Tour No.2)",
-      price: "₹2,799",
       img: pambarImg,
       stops: [
         "Coaker's Walk",
@@ -40,7 +38,6 @@ export default function Packages() {
     {
       id: 3,
       name: "Forest / Park Tour (Tour No.3)",
-      price: "₹3,199",
       img: pineforestImg,
       stops: [
         "Moir Point",
@@ -56,7 +53,6 @@ export default function Packages() {
     {
       id: 4,
       name: "Forest Tour (Wild Way's Tour) (Tour No.4)",
-      price: "₹3,499",
       img: mforest,
       stops: [
         "Silent Valley View",
@@ -72,7 +68,6 @@ export default function Packages() {
     {
       id: 5,
       name: "Flim Chakker Tour (Tour No.5)",
-      price: "₹2,999",
       img: oldtreeImg,
       stops: [
         "Vattakanal Falls",
@@ -127,6 +122,18 @@ export default function Packages() {
                   </a>
                   <a
                     href={`#${t.id === 1 ? 'owner' : 'contact'}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const id = t.id === 1 ? 'owner' : 'contact';
+                      const el = document.getElementById(id);
+                      if (el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if (typeof el.focus === 'function') el.focus();
+                      } else {
+                        // fallback to hash navigation
+                        window.location.hash = id;
+                      }
+                    }}
                     className="inline-block border border-emerald-600 text-emerald-600 px-4 py-2 rounded-lg hover:bg-emerald-50"
                   >
                     Enquire
