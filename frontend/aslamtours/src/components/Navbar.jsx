@@ -3,6 +3,23 @@ import { motion as Motion } from "framer-motion";
 
 export default function Navbar() {
   const [scroll, setScroll] = useState(false);
+  const base = import.meta.env.BASE_URL || "/";
+
+  function navigateToHash(e, id) {
+    // allow regular modifier-clicks (open in new tab)
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (typeof el.focus === "function") el.focus();
+      // update URL hash without jumping
+      history.replaceState(null, '', base + '#' + id);
+    } else {
+      // fallback: navigate to the anchored URL
+      window.location.href = base + '#' + id;
+    }
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -23,10 +40,10 @@ export default function Navbar() {
         <h1 className="text-xl font-bold tracking-wide">Aslam Holidays</h1>
 
         <div className="hidden md:flex gap-8 font-medium">
-          <a href="#services" className="hover:text-emerald-200">Services</a>
-          <a href="#packages" className="hover:text-emerald-200">Packages</a>
-          <a href="#gallery" className="hover:text-emerald-200">Gallery</a>
-          <a href="#contact" className="hover:text-emerald-200">Contact</a>
+          <a href={`${base}#services`} onClick={(e) => navigateToHash(e, 'services')} className="hover:text-emerald-200">Services</a>
+          <a href={`${base}#packages`} onClick={(e) => navigateToHash(e, 'packages')} className="hover:text-emerald-200">Packages</a>
+          <a href={`${base}#gallery`} onClick={(e) => navigateToHash(e, 'gallery')} className="hover:text-emerald-200">Gallery</a>
+          <a href={`${base}#contact`} onClick={(e) => navigateToHash(e, 'contact')} className="hover:text-emerald-200">Contact</a>
         </div>
       </div>
     </Motion.nav>
