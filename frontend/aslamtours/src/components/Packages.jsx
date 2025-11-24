@@ -121,10 +121,10 @@ export default function Packages() {
                     Book Now
                   </a>
                   <a
-                    href={`#${t.id === 1 ? 'owner' : 'contact'}`}
+                    href="#owner"
                     onClick={(e) => {
                       e.preventDefault();
-                      const id = t.id === 1 ? 'owner' : 'contact';
+                      const id = 'owner';
                       const el = document.getElementById(id);
                       if (el) {
                         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
