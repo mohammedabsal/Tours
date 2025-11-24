@@ -1,6 +1,6 @@
 import { motion as Motion } from "framer-motion";
 import { FaEnvelope, FaWhatsapp, FaPhone } from "react-icons/fa";
-import profile from "../assets/profile.jpeg";
+import profile from "../assets/car.jpeg";
 export default function OwnerProfile() {
   return (
     <section id="owner" className="py-20 bg-gradient-to-r from-emerald-50 to-white">
