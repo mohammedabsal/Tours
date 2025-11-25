@@ -6,6 +6,16 @@ export default function Testimonials() {
     { name: "Suresh", text: "Amazing trip! Great service and smooth ride.", rating: 5 },
     { name: "Kesavan", text: "Loved the stay, the cottage was beautiful.", rating: 5 },
     { name: "Hari", text: "Professional driver & well planned sightseeing.", rating: 4 },
+    {name: "Ishaan" , text: "Best travel experience ever!", rating: 5 },
+    {name: "Ram ", text: "Highly recommend Aslam Holidays for Kodaikanal trips.", rating: 5 },
+    {name:"Haroon", text: "Comfortable vehicles and friendly staff.", rating: 4 },
+    {name:"Puvi", text: "Memorable experience, will book again!", rating: 5 },
+    {name:"Paul", text: "Great value for money and excellent service.", rating: 5 },
+    {name:"saravanan", text: "The itinerary was perfect for our family.", rating: 4 },
+    {name:"Dravid", text: "Exceptional experience from start to finish.", rating: 5 },
+    {name:"Sriram", text: "Truly a hassle-free and enjoyable trip.", rating: 5 },
+    {name:"Harshan", text: "The best way to explore Kodaikanal!", rating: 5 },
+    {name: "Girish", text: "Amazing trip! Great service and smooth ride.", rating: 5 },
     { name: "Dhuvarakesh", text: "Exceptional experience from start to finish.", rating: 5 }
   ];
 

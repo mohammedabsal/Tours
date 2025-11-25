@@ -96,7 +96,59 @@ export default function Services() {
 
   return (
     <>
-      <section id="services" className="py-20 bg-gradient-to-r from-emerald-50 to-emerald-100">
+      <style>{`
+        /* Services background: subtle light green */
+        .services-bg{
+          background: linear-gradient(180deg, #f0fdf4 0%, #f7fff8 60%);
+        }
+
+        /* Glass card for services */
+        .svc-card{
+          background: rgba(255,255,255,0.12);
+          -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(255,255,255,0.14);
+          box-shadow: 0 12px 40px rgba(16,185,129,0.06), inset 0 1px 0 rgba(255,255,255,0.04);
+          transition: transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s ease, border-color .22s ease;
+          position: relative;
+          overflow: visible;
+        }
+
+        /* glowing outline element (darker by default) */
+        .svc-card::after{
+          content: '';
+          position: absolute;
+          inset: -2px;
+          border-radius: inherit;
+          pointer-events: none;
+          box-shadow: 0 0 0 6px rgba(16,185,129,0.06), 0 10px 30px rgba(16,185,129,0.08);
+          transition: box-shadow .28s ease, opacity .28s ease, transform .28s ease;
+          opacity: 1;
+        }
+
+        /* hover / focus glow (stronger) */
+        .svc-card:hover, .svc-card:focus-within{
+          transform: translateY(-6px) scale(1.01);
+          border-color: rgba(16,185,129,0.18);
+          box-shadow: 0 28px 90px rgba(16,185,129,0.22), inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+
+        .svc-card:hover::after, .svc-card:focus-within::after{
+          box-shadow: 0 0 0 14px rgba(16,185,129,0.18), 0 40px 140px rgba(16,185,129,0.28);
+          animation: glowFlow 1.6s linear infinite;
+        }
+
+        @keyframes glowFlow{
+          0%{ box-shadow: 0 0 0 10px rgba(16,185,129,0.08), 0 24px 70px rgba(16,185,129,0.14); }
+          50%{ box-shadow: 0 0 0 16px rgba(16,185,129,0.20), 0 36px 100px rgba(16,185,129,0.22); }
+          100%{ box-shadow: 0 0 0 10px rgba(16,185,129,0.08), 0 24px 70px rgba(16,185,129,0.14); }
+        }
+
+        /* Make header strip slightly transparent so glass shows through */
+        .svc-strip{ background: rgba(255,255,255,0.06); }
+      `}</style>
+
+      <section id="services" className="py-20 services-bg">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-emerald-900">Our Services</h2>
 
@@ -120,10 +172,10 @@ export default function Services() {
                 variants={container}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
-                className="relative cursor-pointer overflow-hidden rounded-2xl shadow-md hover:shadow-xl border border-emerald-100 bg-white flex flex-col h-full focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                className="relative cursor-pointer overflow-hidden rounded-2xl shadow-md svc-card flex flex-col h-full focus:outline-none"
               >
                 {/* Header strip (no images) — keeps consistent height and alignment */}
-                <div className="h-28 w-full bg-emerald-100 flex items-center justify-center">
+                <div className="h-28 w-full svc-strip flex items-center justify-center">
                   <span className="text-emerald-800 font-semibold uppercase text-sm tracking-wide">{item.tag}</span>
                 </div>
 

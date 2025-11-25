@@ -32,18 +32,33 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all ${
-        scroll ? "bg-gradient-to-r from-emerald-900/90 via-emerald-800/80 to-emerald-700/70 backdrop-blur-md" : "bg-transparent"
-      }`}
+      className={`fixed left-1/2 transform -translate-x-1/2 top-6 z-50 w-[94%] max-w-7xl transition-all ${
+        scroll ? "backdrop-blur-md bg-white/6 shadow-xl" : "bg-transparent"
+      } rounded-b-2xl`}
     >
-      <div className="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center text-emerald-50">
-        <h1 className="text-xl font-bold tracking-wide">Aslam Holidays</h1>
+      <style>{`
+        /* stronger, more vivid nav colors */
+        .nav-link{ position:relative; display:inline-block; padding:0.35rem 0.5rem; color:rgba(16,184,130,0.98); font-weight:600 }
+        .nav-link span{ position:relative; z-index:2; }
+        /* brighter gradient underline */
+        .nav-link::after{ content:''; position:absolute; left:8%; right:8%; bottom:-8px; height:4px; background: linear-gradient(90deg,#2ee6a1,#059669); transform:scaleX(0); transform-origin:center; transition:transform .26s cubic-bezier(.2,.9,.2,1); border-radius:4px; }
+        .nav-link:hover::after, .nav-link:focus::after{ transform:scaleX(1); }
+        .nav-bar-inner{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+        .nav-links{ display:flex; gap:1.5rem; align-items:center; }
+        /* Light variant for non-scrolled state: vivid mint */
+        :where(.bg-transparent) .nav-link{ color: #24e487ff; }
+      `}</style>
 
-        <div className="hidden md:flex gap-8 font-medium">
-          <a href={`${base}#services`} onClick={(e) => navigateToHash(e, 'services')} className="hover:text-emerald-200">Services</a>
-          <a href={`${base}#packages`} onClick={(e) => navigateToHash(e, 'packages')} className="hover:text-emerald-200">Packages</a>
-          <a href={`${base}#gallery`} onClick={(e) => navigateToHash(e, 'gallery')} className="hover:text-emerald-200">Gallery</a>
-          <a href={`${base}#contact`} onClick={(e) => navigateToHash(e, 'contact')} className="hover:text-emerald-200">Contact</a>
+      <div className="nav-bar-inner max-w-7xl mx-auto px-5 py-3 text-emerald-50">
+        <div className="flex items-center gap-4">
+          <h1 className="text-lg font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-emerald-500 to-emerald-200">Aslam Holidays</h1>
+        </div>
+
+        <div className="hidden md:flex nav-links">
+          <a href={`${base}#services`} onClick={(e) => navigateToHash(e, 'services')} className="nav-link"><span>Services</span></a>
+          <a href={`${base}#packages`} onClick={(e) => navigateToHash(e, 'packages')} className="nav-link"><span>Packages</span></a>
+          <a href={`${base}#gallery`} onClick={(e) => navigateToHash(e, 'gallery')} className="nav-link"><span>Gallery</span></a>
+          <a href={`${base}#contact`} onClick={(e) => navigateToHash(e, 'contact')} className="nav-link"><span>Contact</span></a>
         </div>
       </div>
     </Motion.nav>

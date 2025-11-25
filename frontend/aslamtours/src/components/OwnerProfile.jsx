@@ -1,5 +1,5 @@
 import { motion as Motion } from "framer-motion";
-import { FaEnvelope, FaWhatsapp, FaPhone } from "react-icons/fa";
+import { FaWhatsapp, FaMobileAlt } from "react-icons/fa";
 import profile from "../assets/car.jpeg";
 export default function OwnerProfile() {
   return (
@@ -43,7 +43,7 @@ export default function OwnerProfile() {
               title="Call — +91 99448 81312"
               className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white text-emerald-600 border border-emerald-300 hover:bg-emerald-50"
             >
-              <FaPhone className="w-5 h-5" />
+              <FaMobileAlt className="w-5 h-5" />
               <span className="sr-only">Call +91 99448 81312</span>
             </a>
           </div>
