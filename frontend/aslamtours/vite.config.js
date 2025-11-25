@@ -5,4 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/Tours/',
   plugins: [react(), tailwindcss()],
+  build: {
+  emptyOutDir: true
+}
+
 })
