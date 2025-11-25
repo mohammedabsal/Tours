@@ -4,17 +4,17 @@ import { motion as Motion } from "framer-motion";
 export default function Contact() {
   const [form, setForm] = useState({ name: "", message: "" });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    await fetch("https://YOUR_BACKEND_URL/sendmessage", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-
-    alert("Message sent!");
-    setForm({ name: "", email: "", message: "" });
+    // Build WhatsApp prefilled message and open it for the user
+    const phone = '919080806831';
+    const text = `Name: ${form.name}\nMessage: ${form.message}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    // Open in a new tab (mobile will open WhatsApp app)
+    window.open(url, '_blank');
+    // Reset form
+    setForm({ name: '', message: '' });
   };
 
   return (

@@ -6,6 +6,7 @@ import Gallery from "../components/Gallery";
 import Testimonials from "../components/Testimonials";
 import OwnerProfile from "../components/OwnerProfile";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <OwnerProfile />
       <Packages />
       <Gallery />
+      <Contact />
       <Testimonials />
       <Footer />
     </>

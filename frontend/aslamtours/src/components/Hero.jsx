@@ -73,7 +73,7 @@ export default function Hero() {
             WhatsApp Booking
           </a>
           <a
-            href="#"
+            href="#contact"
             className="bg-white px-6 py-3 rounded-lg text-black font-semibold hover:bg-gray-200"
           >
             Email Us
