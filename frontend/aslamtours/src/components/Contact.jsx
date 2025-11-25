@@ -2,12 +2,12 @@ import { useState } from "react";
 import { motion as Motion } from "framer-motion";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", message: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("https://YOUR_BACKEND_URL/sendmail", {
+    await fetch("https://YOUR_BACKEND_URL/sendmessage", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -27,11 +27,6 @@ export default function Contact() {
             <div>
               <p className="font-semibold">WhatsApp / Phone</p>
               <p className="mt-1">+91 90808 06831 • +91 98423 06461 • +91 99448 81312</p>
-            </div>
-
-            <div>
-              <p className="font-semibold">Email</p>
-              <p className="mt-1">rajartr22@gmail.com</p>
             </div>
 
             <div>
@@ -57,14 +52,7 @@ export default function Contact() {
                 required
               />
 
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="p-4 rounded-lg text-emerald-900"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                required
-              />
+              {/* Email removed — contact via WhatsApp or message form */}
 
               <textarea
                 placeholder="Your Message"

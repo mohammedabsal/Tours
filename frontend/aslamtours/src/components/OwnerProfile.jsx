@@ -35,15 +35,7 @@ export default function OwnerProfile() {
               <span className="sr-only">WhatsApp +91 90808 06831</span>
             </a>
 
-            <a
-              href="mailto:rajartr22@gmail.com"
-              aria-label="Email"
-              title="Email — rajartr22@gmail.com"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700"
-            >
-              <FaEnvelope className="w-5 h-5" />
-              <span className="sr-only">Email rajartr22@gmail.com</span>
-            </a>
+            {/* Email contact removed — use WhatsApp or phone */}
 
             <a
               href="tel:+919944881312"
