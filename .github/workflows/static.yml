@@ -7,31 +7,29 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          lfs: true          # pull LFS files so build includes real media
           fetch-depth: 0
 
-      - name: Use Node.js 18
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'
 
       - name: Install dependencies
         working-directory: frontend/aslamtours
         run: npm ci
 
-      - name: Build frontend
+      - name: Build Vite App
         working-directory: frontend/aslamtours
         run: npm run build
 
-      - name: Deploy to gh-pages
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: frontend/aslamtours/dist
           clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}
